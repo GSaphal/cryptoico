@@ -6,12 +6,35 @@ export default class ThreeDGraphics extends Component {
     this.state = {
       simi_tokens: 1,
       price: 0.5,
+      success: false,
+      error: false,
     };
+    this.handleClick = this.handleClick.bind(this);
   }
+
+  handleClick = () => {
+    console.log(this.state.simi_tokens);
+    console.log(Number.isInteger(this.state.simi_tokens));
+    if (this.state.simi_tokens % 1 === 0) {
+      this.setState({
+        success: true,
+        simi_tokens: 1,
+
+        error: false,
+      });
+    } else {
+      this.setState({
+        error: true,
+        simi_tokens: 1,
+
+        success: false,
+      });
+    }
+  };
   render() {
+    window.func();
     return (
       <div>
-        {/* Header: 3D Graphics */}
         <section className="head-area" id="head-area" data-midnight="white">
           <div id="particles-js" />
           <div className="head-content container-fluid bg-gradient d-flex align-items-center">
@@ -19,6 +42,41 @@ export default class ThreeDGraphics extends Component {
               <div className="banner-wrapper">
                 <div className="row align-items-center">
                   <div className="col-lg-6 col-md-12">
+                    {this.state.error && (
+                      <div
+                        className="alert alert-danger alert-dismissible fade show"
+                        role="alert"
+                        id="danger-alert"
+                      >
+                        <strong>Sorry</strong> Some error occoured.
+                        <button
+                          type="button"
+                          className="close"
+                          data-dismiss="alert"
+                          aria-label="Close"
+                        >
+                          <span aria-hidden="true">×</span>
+                        </button>
+                      </div>
+                    )}
+                    {this.state.success && (
+                      <div
+                        className="alert alert-success alert-dismissible fade show"
+                        role="alert"
+                        id="success-alert"
+                      >
+                        <strong>Success</strong> You have successfully purchased
+                        the token.
+                        <button
+                          type="button"
+                          className="close"
+                          data-dismiss="alert"
+                          aria-label="Close"
+                        >
+                          <span aria-hidden="true">×</span>
+                        </button>
+                      </div>
+                    )}
                     <div className="banner-content pt-5">
                       <h1
                         className="best-template animated"
@@ -128,6 +186,8 @@ export default class ThreeDGraphics extends Component {
                 <button
                   type="button"
                   className="btn btn-lg btn-gradient-purple btn-glow animated"
+                  onClick={this.handleClick}
+                  data-dismiss="modal"
                 >
                   Buy Token
                 </button>

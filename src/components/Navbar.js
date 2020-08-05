@@ -2,6 +2,20 @@ import React, { Component } from "react";
 
 export default class Navbar extends Component {
   render() {
+    var listStyle = {
+      fontSize: "13px",
+      lineHeight: "20px",
+      padding: "12px",
+      fontWeight: "600",
+    };
+    var listStyle1 = {
+      fontSize: "12px",
+      lineHeight: "20px",
+      padding: "12px",
+      fontWeight: "400",
+      width: "10px",
+    };
+
     return (
       <header className="page-header">
         <nav className="main-menu static-top navbar-dark navbar navbar-expand-lg fixed-top mb-1">
@@ -85,7 +99,7 @@ export default class Navbar extends Component {
                     data-animation-delay="1.6s"
                   >
                     <a
-                      className="dropdown-toggle white mt-3"
+                      className="dropdown-toggle white mt-3  "
                       href="#"
                       role="button"
                       id="more"
@@ -93,43 +107,45 @@ export default class Navbar extends Component {
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
-                      More
+                      Wallet
                     </a>
                     <div className="dropdown-menu" aria-labelledby="more">
-                      <a className="dropdown-item" href="index.html#mobile-app">
-                        App
-                      </a>
-                      <a className="dropdown-item" href="index.html#team">
-                        Team
-                      </a>
-                      <a className="dropdown-item" href="index.html#faq">
-                        FAQ
-                      </a>
-                      <a className="dropdown-item" href="index.html#contact">
-                        Contact
-                      </a>
-                      <a className="dropdown-item" href="template-404.html">
-                        404
-                      </a>
-                      <a
-                        className="dropdown-item"
-                        href="template-inner-page-with-sidebar.html"
-                      >
-                        Sample Page
-                      </a>
+                      <div className="dropdown-item" style={listStyle}>
+                        <img
+                          src="theme-assets/images/wallet.png"
+                          alt="Crypto Logo"
+                          className="px-2"
+                          style={{
+                            height: "20px",
+                          }}
+                        />
+                        2bg3fjy345k2jsh3kdnh4
+                      </div>
+                      <hr className="m-0" />{" "}
+                      <div className="dropdown-item" style={listStyle1}>
+                        <img
+                          src="theme-assets/images/logo.png"
+                          alt="Crypto Logo"
+                          className="pl-3 pr-2"
+                          style={{ height: "20px" }}
+                        />
+                        12 ETH
+                      </div>
+                      <div className="dropdown-item" style={listStyle1}>
+                        <img
+                          src="theme-assets/images/logo.png"
+                          alt="Crypto Logo"
+                          className="pl-3 pr-2"
+                          style={{ height: "20px" }}
+                        />
+                        1223 SIMI
+                      </div>
                     </div>
                   </li>
                 </ul>
+                <span id="slide-line"></span>
               </div>
             </div>
-          </div>
-          <div
-            className="float-right nav-link d-flex flex-column mr-4 mt-2"
-            style={{ fontSize: "12px", color: "white" }}
-          >
-            <div>Address: 029dj294ui2nw928hd820dn308</div>
-            <div>ETH: 12</div>
-            <div>My DC: 1223</div>
           </div>
         </nav>{" "}
       </header>

@@ -14,30 +14,32 @@ import Advisors from "./components/Advisors";
 import FAQ from "./components/FAQ";
 import Modals from "./components/Modals";
 import Footer from "./components/Footer";
-export default function App() {
-  return (
-    <React.Fragment>
-      <Preloader />
-      <Sidenav />
-      <Navbar />
-      <div className="content-wrapper">
-        <div className="content-body">
-          <main>
-            <ThreeDGraphics />
-            <About />
-            <ProblemandSolutions />
-            <Whitepaper />
-            <Roadmap />
-            <OurCoins />
-            <TokenDistribution />
-            <Team />
-            <Advisors />
-            <FAQ />
-            <Modals />
-          </main>
+export default class App extends React.Component {
+  render() {
+    return (
+      <React.Fragment>
+        <Preloader />
+        <Sidenav />
+        <Navbar />
+        <div className="content-wrapper">
+          <div className="content-body">
+            <main>
+              <ThreeDGraphics />
+              <About />
+              <ProblemandSolutions />
+              <Whitepaper />
+              <Roadmap />
+              <OurCoins />
+              <TokenDistribution />
+              <Team />
+              <Advisors />
+              <FAQ />
+              <Modals />
+            </main>
+          </div>
         </div>
-      </div>
-      <Footer />
-    </React.Fragment>
-  );
+        <Footer />
+      </React.Fragment>
+    );
+  }
 }
