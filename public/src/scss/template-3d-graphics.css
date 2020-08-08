@@ -1916,7 +1916,7 @@ header .navbar.navbar-shadow {
   background: #f3394d !important;
 }
 .ytp-button:not([aria-disabled="true"]):not([disabled]):not([aria-hidden="true"]) {
-  background: #f3394d !important;
+  background: #f3394d !important; 
 }
 /* Responsive navbar for medium and small screen */
 @media (max-width: 991.98px) {
