@@ -26,7 +26,11 @@ export default class Navbar extends Component {
               data-animation-delay="1s"
               href="#head-area"
             >
-              <img src="theme-assets/images/logo.png" alt="Crypto Logo" />
+              <img
+                src="theme-assets/images/navbar-logo.png"
+                alt="Crypto Logo"
+                style={{ height: "50px" }}
+              />
               <span className="brand-text">
                 <span className="font-weight-bold">SIMI</span> Crowdsale
               </span>
@@ -44,18 +48,18 @@ export default class Navbar extends Component {
             </button>
             <div className="collapse navbar-collapse" id="navbarCollapse">
               <div id="navigation" className="navbar-nav ml-auto">
-                <ul className="navbar-nav mt-1">
+                <ul className="navbar-nav mt-0">
                   <li
-                    className="nav-item animated mt-3"
+                    className="nav-item animated mt-2"
                     data-animation="fadeInDown"
                     data-animation-delay="1.1s"
                   >
                     <a className="nav-link" href="index.html#about">
-                      What is ICO
+                      What is SIMI
                     </a>
                   </li>
                   <li
-                    className="nav-item animated mt-3"
+                    className="nav-item animated mt-2"
                     data-animation="fadeInDown"
                     data-animation-delay="1.2s"
                   >
@@ -64,7 +68,7 @@ export default class Navbar extends Component {
                     </a>
                   </li>
                   <li
-                    className="nav-item animated mt-3"
+                    className="nav-item animated mt-2"
                     data-animation="fadeInDown"
                     data-animation-delay="1.3s"
                   >
@@ -78,14 +82,14 @@ export default class Navbar extends Component {
                     data-animation-delay="1.4s"
                   >
                     <a
-                      className="nav-link mt-3"
+                      className="nav-link mt-2"
                       href="index.html#token-sale-mobile-app"
                     >
                       Token Sale
                     </a>
                   </li>
                   <li
-                    className="nav-item animated mt-3"
+                    className="nav-item animated mt-2"
                     data-animation="fadeInDown"
                     data-animation-delay="1.5s"
                   >
@@ -93,55 +97,70 @@ export default class Navbar extends Component {
                       Roadmap
                     </a>
                   </li>
-                  <li
-                    className="dropdown show mr-2  mt-3 px-2 animated"
-                    data-animation="fadeInDown"
-                    data-animation-delay="1.6s"
-                  >
-                    <a
-                      className="dropdown-toggle white mt-3  "
-                      href="#"
-                      role="button"
-                      id="more"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
+                  {this.props.MetaMaskInstalled ? (
+                    <li
+                      className="dropdown show mr-2  mt-2 px-2 animated"
+                      data-animation="fadeInDown"
+                      data-animation-delay="1.6s"
                     >
-                      Wallet
-                    </a>
-                    <div className="dropdown-menu" aria-labelledby="more">
-                      <div className="dropdown-item" style={listStyle}>
-                        <img
-                          src="theme-assets/images/wallet.png"
-                          alt="Crypto Logo"
-                          className="px-2"
-                          style={{
-                            height: "20px",
-                          }}
-                        />
-                        2bg3fjy345k2jsh3kdnh4
+                      <a
+                        className="dropdown-toggle white mt-3  "
+                        href="#"
+                        role="button"
+                        id="more"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        Wallet
+                      </a>
+                      <div className="dropdown-menu" aria-labelledby="more">
+                        <div className="dropdown-item" style={listStyle}>
+                          <img
+                            src="theme-assets/images/wallet.png"
+                            alt="Crypto Logo"
+                            className="px-2"
+                            style={{
+                              height: "20px",
+                            }}
+                          />
+                          2bg3fjy345k2jsh3kdnh4
+                        </div>
+                        <hr className="m-0" />{" "}
+                        <div className="dropdown-item" style={listStyle1}>
+                          <img
+                            src="theme-assets/images/logo.png"
+                            alt="Crypto Logo"
+                            className="pl-3 pr-2"
+                            style={{ height: "20px" }}
+                          />
+                          12 ETH
+                        </div>
+                        <div className="dropdown-item" style={listStyle1}>
+                          <img
+                            src="theme-assets/images/logo.png"
+                            alt="Crypto Logo"
+                            className="pl-3 pr-2"
+                            style={{ height: "20px" }}
+                          />
+                          1223 SIMI
+                        </div>
                       </div>
-                      <hr className="m-0" />{" "}
-                      <div className="dropdown-item" style={listStyle1}>
-                        <img
-                          src="theme-assets/images/logo.png"
-                          alt="Crypto Logo"
-                          className="pl-3 pr-2"
-                          style={{ height: "20px" }}
-                        />
-                        12 ETH
-                      </div>
-                      <div className="dropdown-item" style={listStyle1}>
-                        <img
-                          src="theme-assets/images/logo.png"
-                          alt="Crypto Logo"
-                          className="pl-3 pr-2"
-                          style={{ height: "20px" }}
-                        />
-                        1223 SIMI
-                      </div>
-                    </div>
-                  </li>
+                    </li>
+                  ) : (
+                    <React.Fragment>
+                      <form class="form-inline mt-2 mt-md-0">
+                        <a
+                          class="btn btn-sm btn-gradient-purple btn-glow my-3 my-sm-0 animated mt-2"
+                          data-animation="fadeInDown"
+                          data-animation-delay="1.8s"
+                          href="#"
+                        >
+                          Connect
+                        </a>
+                      </form>
+                    </React.Fragment>
+                  )}
                 </ul>
                 <span id="slide-line"></span>
               </div>

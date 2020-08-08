@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "template-counter-variables.scss"
+    ],
+    "names": [],
+    "file": "template-counter-variables.css"
+}

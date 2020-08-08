@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactPlayer from "react-player/lazy";
 
 export default class ThreeDGraphics extends Component {
   constructor(props) {
@@ -8,82 +9,57 @@ export default class ThreeDGraphics extends Component {
       price: 0.5,
       success: false,
       error: false,
+      isLoading: false,
+      errorMessage: "There was error during purchase.",
     };
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick = () => {
-    console.log(this.state.simi_tokens);
-    console.log(Number.isInteger(this.state.simi_tokens));
-    if (this.state.simi_tokens % 1 === 0) {
+    try {
       this.setState({
-        success: true,
-        simi_tokens: 1,
-
-        error: false,
+        isLoading: true,
       });
-    } else {
+      setTimeout(() => {
+        if (this.state.simi_tokens % 1 === 0) {
+          this.setState({
+            success: true,
+            simi_tokens: 1,
+            isLoading: false,
+            error: false,
+          });
+        } else {
+          this.setState({
+            error: true,
+            simi_tokens: 1,
+            isLoading: false,
+            success: false,
+          });
+        }
+      }, 3000);
+    } catch (e) {
       this.setState({
-        error: true,
-        simi_tokens: 1,
-
-        success: false,
+        errorMessage: e.message,
       });
     }
   };
   render() {
-    window.func();
     return (
       <div>
         <section className="head-area" id="head-area" data-midnight="white">
           <div id="particles-js" />
           <div className="head-content container-fluid bg-gradient d-flex align-items-center">
-            <div className="container">
+            <div className="container-fluid">
               <div className="banner-wrapper">
                 <div className="row align-items-center">
-                  <div className="col-lg-6 col-md-12">
-                    {this.state.error && (
-                      <div
-                        className="alert alert-danger alert-dismissible fade show"
-                        role="alert"
-                        id="danger-alert"
-                      >
-                        <strong>Sorry</strong> Some error occoured.
-                        <button
-                          type="button"
-                          className="close"
-                          data-dismiss="alert"
-                          aria-label="Close"
-                        >
-                          <span aria-hidden="true">×</span>
-                        </button>
-                      </div>
-                    )}
-                    {this.state.success && (
-                      <div
-                        className="alert alert-success alert-dismissible fade show"
-                        role="alert"
-                        id="success-alert"
-                      >
-                        <strong>Success</strong> You have successfully purchased
-                        the token.
-                        <button
-                          type="button"
-                          className="close"
-                          data-dismiss="alert"
-                          aria-label="Close"
-                        >
-                          <span aria-hidden="true">×</span>
-                        </button>
-                      </div>
-                    )}
+                  <div className="col-lg-4 col-md-12 offset-2">
                     <div className="banner-content pt-5">
                       <h1
                         className="best-template animated"
                         data-animation="fadeInUpShorter"
                         data-animation-delay="1.5s"
                       >
-                        Crypto ICO is modern, clean and{" "}
+                        SIMI Crowdsale is modern, clean and{" "}
                         <br className="d-none d-xl-block" />
                         gradient ui ico most trending{" "}
                         <br className="d-none d-xl-block" />
@@ -119,16 +95,16 @@ export default class ThreeDGraphics extends Component {
                       </div>
                     </div>
                   </div>
-                  <div className="col-lg-6 col-md-12 move-first">
+                  <div className="col-lg-6 col-md-12 move-first mt-3">
                     <div
                       className="crypto-3d-graphic animated"
                       data-animation="fadeInUpShorter"
                       data-animation-delay="1.7s"
                     >
-                      <img
-                        src="theme-assets/images/banner-graphic.png"
-                        className="graphic-3d-img mx-auto d-block"
-                        alt="CICO"
+                      <ReactPlayer
+                        width="80%"
+                        height="400px"
+                        url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
                       />
                     </div>
                   </div>
@@ -147,51 +123,89 @@ export default class ThreeDGraphics extends Component {
         >
           <div className="modal-dialog" role="document">
             <div className="modal-content">
-              <div className="modal-header">
-                <h5 className="modal-title" id="exampleModalLabel">
-                  Purchase Token
-                </h5>
-                <button
-                  type="button"
-                  className="close"
-                  data-dismiss="modal"
-                  aria-label="Close"
-                >
-                  <span aria-hidden="true">×</span>
-                </button>
-              </div>
-              <div className="modal-body">
-                <p>
-                  Price of 1 Simi Token is {this.state.price + " Ethereum"}{" "}
-                </p>
-                <form>
-                  <input
-                    className="form-control form-control-lg"
-                    type="number"
-                    name="simi_tokens"
-                    value={this.state.simi_tokens}
-                    onChange={(e) =>
-                      this.setState({ [e.target.name]: e.target.value })
-                    }
-                    placeholder="Number of Simi Tokens"
-                  />
-                  <p>
-                    Total Price=
-                    {this.state.simi_tokens * this.state.price +
-                      " Ethereum"}{" "}
-                  </p>
-                </form>
-              </div>
-              <div className="modal-footer">
-                <button
-                  type="button"
-                  className="btn btn-lg btn-gradient-purple btn-glow animated"
-                  onClick={this.handleClick}
-                  data-dismiss="modal"
-                >
-                  Buy Token
-                </button>
-              </div>
+              {this.props.MetaMaskInstalled ? (
+                <React.Fragment>
+                  <div className="modal-header">
+                    <h5 className="modal-title" id="exampleModalLabel">
+                      Purchase Token
+                    </h5>
+                    <button
+                      type="button"
+                      className="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+
+                  <div className="modal-body">
+                    {" "}
+                    <p>
+                      Price of 1 Simi Token is {this.state.price + " Ethereum"}{" "}
+                    </p>
+                    <form>
+                      <input
+                        className="form-control form-control-lg"
+                        type="number"
+                        name="simi_tokens"
+                        value={this.state.simi_tokens}
+                        onChange={(e) =>
+                          this.setState({ [e.target.name]: e.target.value })
+                        }
+                        placeholder="Number of Simi Tokens"
+                      />
+                      <p>
+                        Total Price=
+                        {this.state.simi_tokens * this.state.price +
+                          " Ethereum"}{" "}
+                      </p>
+                      <p>
+                        {this.state.success && (
+                          <div className="text-success">
+                            <i class="fa fa-check px-2"></i>
+                            You have successfully purchased .
+                          </div>
+                        )}
+                        {this.state.error && (
+                          <div className="text-danger">
+                            <i class="fa fa-times px-2"></i>
+                            {this.state.errorMessage}
+                          </div>
+                        )}
+                      </p>
+                    </form>
+                  </div>
+                  <div className="modal-footer">
+                    <button
+                      type="button"
+                      className="btn btn-lg btn-gradient-purple btn-glow animated"
+                      onClick={this.handleClick}
+                    >
+                      {this.state.isLoading && (
+                        <i class="fa fa-spinner fa-spin px-2"></i>
+                      )}
+                      Buy Token
+                    </button>
+                  </div>
+                </React.Fragment>
+              ) : (
+                <React.Fragment>
+                  <div className="modal-body p-4">
+                    You are not connected to Meta Mask . Please connect and
+                    reload the site.
+                  </div>
+                  <div className="modal-footer">
+                    <button
+                      type="button"
+                      className="btn btn-sm btn-gradient-purple btn-glow animated"
+                      onClick={() => window.location.reload()}
+                    >
+                      Refresh Page
+                    </button>
+                  </div>
+                </React.Fragment>
+              )}
             </div>
           </div>
         </div>

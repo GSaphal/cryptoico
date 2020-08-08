@@ -15,16 +15,28 @@ import FAQ from "./components/FAQ";
 import Modals from "./components/Modals";
 import Footer from "./components/Footer";
 export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      MetaMaskInstalled: true,
+    };
+  }
+  componentDidMount() {
+    window.scroll();
+    window.func();
+  }
   render() {
     return (
       <React.Fragment>
         <Preloader />
         <Sidenav />
-        <Navbar />
+        <Navbar MetaMaskInstalled={this.state.MetaMaskInstalled} />
         <div className="content-wrapper">
           <div className="content-body">
             <main>
-              <ThreeDGraphics />
+              <ThreeDGraphics
+                MetaMaskInstalled={this.state.MetaMaskInstalled}
+              />
               <About />
               <ProblemandSolutions />
               <Whitepaper />

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA;iGACiG;AAGjG,AAAA,uBAAuB,CAAA;EACtB,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAE,CAAC;EACN,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,gBAAgB;CACxB",
+    "sources": [
+        "bg-particles.scss"
+    ],
+    "names": [],
+    "file": "bg-particles.css"
+}

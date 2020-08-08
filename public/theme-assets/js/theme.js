@@ -68,12 +68,12 @@ $(window).on("load", function () {
     var scroll = $(window).scrollTop();
     if (scroll >= 50) {
       if ($(window).width() > 992) {
-        $(".navbar").addClass("navbar-fixed navbar-shadow");
+        $(".navbar").addClass("navbar-fixed navbar-shadow my-navbar");
         $(".navbar #slide-line").removeClass("d-none");
         inverseNavbar(true); // For inverse navbar
       }
     } else {
-      $(".navbar").removeClass("navbar-fixed navbar-shadow");
+      $(".navbar").removeClass("navbar-fixed navbar-shadow my-navbar");
       $(".navbar #slide-line").addClass("d-none");
       inverseNavbar(false);
     }
@@ -91,42 +91,43 @@ $(window).on("load", function () {
   });
 
   /* On menu click, Smooth Scrolling */
-  $('.main-menu a[href*="#"]')
-    .not('[href="#"]')
-    .not('[href="#0"]')
-    .not(".link")
-    .click(function (event) {
-      if (
-        location.pathname.replace(/^\//, "") ==
-          this.pathname.replace(/^\//, "") &&
-        location.hostname == this.hostname
-      ) {
-        var target = $(this.hash);
-        target = target.length
-          ? target
-          : $("[name=" + this.hash.slice(1) + "]");
-        if (target.length) {
-          event.preventDefault();
-          $("html, body").animate(
-            {
-              scrollTop: target.offset().top,
-            },
-            1000,
-            function () {
-              var $target = $(target);
-              $target.focus();
-              if ($target.is(":focus")) {
-                return false;
-              } else {
-                $target.attr("tabindex", "-1");
+  window.scroll = function () {
+    $('.main-menu a[href*="#"]')
+      .not('[href="#"]')
+      .not('[href="#0"]')
+      .not(".link")
+      .click(function (event) {
+        if (
+          location.pathname.replace(/^\//, "") ==
+            this.pathname.replace(/^\//, "") &&
+          location.hostname == this.hostname
+        ) {
+          var target = $(this.hash);
+          target = target.length
+            ? target
+            : $("[name=" + this.hash.slice(1) + "]");
+          if (target.length) {
+            event.preventDefault();
+            $("html, body").animate(
+              {
+                scrollTop: target.offset().top,
+              },
+              1000,
+              function () {
+                var $target = $(target);
                 $target.focus();
+                if ($target.is(":focus")) {
+                  return false;
+                } else {
+                  $target.attr("tabindex", "-1");
+                  $target.focus();
+                }
               }
-            }
-          );
+            );
+          }
         }
-      }
-    });
-
+      });
+  };
   /* FlipClock Counter */
   var clock;
   clock = $(".clock").FlipClock({
