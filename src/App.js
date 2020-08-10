@@ -24,12 +24,13 @@ export default class App extends React.Component {
   componentDidMount() {
     window.scroll();
     window.func();
+    window.navbar();
+    window.swiper();
   }
   render() {
     return (
       <React.Fragment>
         <Preloader />
-        <Sidenav />
         <Navbar MetaMaskInstalled={this.state.MetaMaskInstalled} />
         <div className="content-wrapper">
           <div className="content-body">

@@ -1766,7 +1766,8 @@ svg#loader g:last-child circle {
   text-transform: uppercase;
 }
 
-.navbar.navbar-dark {
+.navbar.navbar-light {
+  background: white;
   min-height: 65px;
 }
 
@@ -1916,7 +1917,7 @@ header .navbar.navbar-shadow {
   background: #f3394d !important;
 }
 .ytp-button:not([aria-disabled="true"]):not([disabled]):not([aria-hidden="true"]) {
-  background: #f3394d !important; 
+  background: #f3394d !important;
 }
 /* Responsive navbar for medium and small screen */
 @media (max-width: 991.98px) {
@@ -3946,10 +3947,10 @@ header .navbar.navbar-fixed {
 
 @media (max-width: 991.98px) {
   .main-menu.navbar.navbar-absolute.open {
-    background: #183e85;
+    background: #ffffff;
   }
   .main-menu.navbar .dropdown-menu {
-    background: #1d4a9f;
+    background: #ffffff;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
   }

@@ -2625,13 +2625,16 @@ svg#loader g:last-child circle {
   color: black;
   text-transform: uppercase;
 }
-.navbar.navbar-dark {
-  min-height: 80px;
+.navbar.navbar-light {
+  min-height: 65px;
   background-color: white;
 }
 .navbar.navbar-absolute {
   position: absolute;
+  background: white !important;
   top: 0;
+  min-height: 65px;
+
   left: 0;
   width: 100%;
   z-index: 999;
@@ -2720,9 +2723,7 @@ svg#loader g:last-child circle {
   left: 13px;
   top: -8px;
 }
-.navbar.navbar-light {
-  min-height: 65px;
-}
+
 .navbar.navbar-light a {
   color: #7d7d7d;
 }
@@ -2783,7 +2784,6 @@ header .navbar.navbar-shadow {
   }
   .main-menu.navbar .navbar-toggler {
     margin-right: 1rem;
-    border-color: rgba(255, 255, 255, 0.7);
   }
   .main-menu.navbar div.navbar-nav {
     padding: 1rem 1.5rem;
@@ -4758,7 +4758,7 @@ header .navbar.navbar-fixed {
 
 @media (max-width: 991.98px) {
   .main-menu.navbar.navbar-absolute.open {
-    background: #183e85;
+    background: #ffffff;
   }
   .main-menu.navbar .dropdown-menu {
     background: #1d4a9f;
@@ -4782,6 +4782,7 @@ header .navbar.navbar-fixed {
     text-align: center;
   }
   .head-area .head-content h1 {
+    margin-top: 30px;
     font-size: 1.5rem;
     line-height: 2rem;
   }

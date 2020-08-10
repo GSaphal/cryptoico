@@ -84,12 +84,12 @@ $(window).on("load", function () {
   $(window).resize(function () {
     /* Invoke on window resize */ navbarAbsolute();
   });
-
-  /* Menu navbar toggler animation */
-  $(".main-menu .navbar-toggler").click(function (event) {
-    $(".main-menu").toggleClass("open", 2000, "swing");
-  });
-
+  window.navbar = function () {
+    /* Menu navbar toggler animation */
+    $(".main-menu .navbar-toggler").click(function (event) {
+      $(".main-menu").toggleClass("open", 2000, "swing");
+    });
+  };
   /* On menu click, Smooth Scrolling */
   window.scroll = function () {
     $('.main-menu a[href*="#"]')
@@ -165,41 +165,42 @@ $(window).on("load", function () {
     /* a poor man's stop video */
     $("#video").attr("src", $videoSrc);
   });
-
-  /* Initialize Swiper */
-  var swiper = new Swiper(".swiper-container", {
-    slidesPerView: 5,
-    grabCursor: true,
-    navigation: {
-      nextEl: ".next-slide",
-      prevEl: ".prev-slide",
-    },
-    /* Responsive breakpoints */
-    breakpoints: {
-      /* when window width is <= 576px */
-      576: {
-        slidesPerView: 1,
+  window.swiper = function () {
+    /* Initialize Swiper */
+    var swiper = new Swiper(".swiper-container", {
+      slidesPerView: 5,
+      grabCursor: true,
+      navigation: {
+        nextEl: ".next-slide",
+        prevEl: ".prev-slide",
       },
-      /* when window width is <= 767px */
-      767: {
-        slidesPerView: 2,
+      /* Responsive breakpoints */
+      breakpoints: {
+        /* when window width is <= 576px */
+        576: {
+          slidesPerView: 1,
+        },
+        /* when window width is <= 767px */
+        767: {
+          slidesPerView: 2,
+        },
+        /* when window width is <= 992px */
+        992: {
+          slidesPerView: 3,
+        },
       },
-      /* when window width is <= 992px */
-      992: {
-        slidesPerView: 3,
-      },
-    },
-  });
+    });
 
-  if ($(window).width() < 992) {
-    swiper.slideTo(2, 1000, false);
-  }
-
-  $(window).resize(function () {
     if ($(window).width() < 992) {
       swiper.slideTo(2, 1000, false);
     }
-  });
+
+    $(window).resize(function () {
+      if ($(window).width() < 992) {
+        swiper.slideTo(2, 1000, false);
+      }
+    });
+  };
 })(window, document, jQuery);
 
 /* Absolute navbar below 992(md) screen */

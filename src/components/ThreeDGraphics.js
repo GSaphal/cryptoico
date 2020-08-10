@@ -49,10 +49,10 @@ export default class ThreeDGraphics extends Component {
         <section className="head-area" id="head-area" data-midnight="white">
           <div id="particles-js" />
           <div className="head-content container-fluid bg-gradient d-flex align-items-center">
-            <div className="container-fluid">
+            <div className="container">
               <div className="banner-wrapper">
-                <div className="row align-items-center">
-                  <div className="col-lg-4 col-md-12 offset-2">
+                <div className="row justify-content-center align-items-center">
+                  <div className="col-lg-6  col-sm-12 col-md-12">
                     <div className="banner-content pt-5">
                       <h1
                         className="best-template animated"
@@ -95,14 +95,14 @@ export default class ThreeDGraphics extends Component {
                       </div>
                     </div>
                   </div>
-                  <div className="col-lg-6 col-md-12 move-first mt-3">
+                  <div className=" col-sm-12 col-lg-6 col-md-12 move-first mt-3">
                     <div
                       className="crypto-3d-graphic animated"
                       data-animation="fadeInUpShorter"
                       data-animation-delay="1.7s"
                     >
                       <ReactPlayer
-                        width="80%"
+                        width="100%"
                         height="400px"
                         url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
                       />
