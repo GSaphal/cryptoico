@@ -104,7 +104,8 @@ export default class ThreeDGraphics extends Component {
                       <ReactPlayer
                         width="100%"
                         height="400px"
-                        url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
+                        url="1.mp4"
+                        controls={true}
                       />
                     </div>
                   </div>
@@ -209,7 +210,6 @@ export default class ThreeDGraphics extends Component {
             </div>
           </div>
         </div>
-        {/*/ Header: 3D Graphics */}
       </div>
     );
   }
