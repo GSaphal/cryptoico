@@ -9,6 +9,7 @@ export default class ThreeDGraphics extends Component {
       price: 0.5,
       success: false,
       error: false,
+      playing: false,
       isLoading: false,
       errorMessage: "There was error during purchase.",
     };
@@ -101,11 +102,18 @@ export default class ThreeDGraphics extends Component {
                       data-animation="fadeInUpShorter"
                       data-animation-delay="1.7s"
                     >
-                      <ReactPlayer
-                        width="100%"
-                        height="400px"
-                        url="1.mp4"
-                        controls={true}
+                      <img
+                        src="Capture.JPG"
+                        className="img-fluid"
+                        data-toggle="modal"
+                        data-backdrop="static"
+                        data-keyboard="false"
+                        onClick={() => {
+                          this.setState({
+                            playing: true,
+                          });
+                        }}
+                        data-target="#video"
                       />
                     </div>
                   </div>
@@ -114,6 +122,54 @@ export default class ThreeDGraphics extends Component {
             </div>
           </div>
         </section>
+        <div
+          className="modal  model-lg  fade"
+          id="video"
+          tabIndex={-1}
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div
+            className="modal-dialog modal-lg  modal-dialog-centered"
+            role="document"
+          >
+            <div
+              className="modal-content"
+              style={{ backgroundColor: "transparent", border: "none" }}
+            >
+              <React.Fragment>
+                <div className="modal-header">
+                  <h5 className="modal-title" id="exampleModalLabel">
+                    Purchase Token
+                  </h5>
+                  <button
+                    type="button"
+                    className="close text-light"
+                    data-dismiss="modal"
+                    style={{ fontSize: "3rem" }}
+                    aria-label="Close"
+                    onClick={() => {
+                      this.setState({
+                        playing: false,
+                      });
+                    }}
+                  >
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <ReactPlayer
+                  width="100%"
+                  height="100%"
+                  url="1.mp4"
+                  controls={true}
+                  playing={this.state.playing && true}
+                />
+              </React.Fragment>
+            </div>
+          </div>
+        </div>
+
         <div
           className="modal fade"
           id="exampleModal"
