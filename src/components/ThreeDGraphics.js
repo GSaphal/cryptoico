@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ReactPlayer from "react-player/lazy";
+import ModalVideo from "react-modal-video";
 
 export default class ThreeDGraphics extends Component {
   constructor(props) {
@@ -9,13 +9,69 @@ export default class ThreeDGraphics extends Component {
       price: 0.5,
       success: false,
       error: false,
+      isOpen: false,
       playing: false,
       isLoading: false,
       errorMessage: "There was error during purchase.",
     };
+    this.openModal = this.openModal.bind(this);
+
     this.handleClick = this.handleClick.bind(this);
   }
-
+  openModal() {
+    this.setState({ isOpen: true });
+  }
+  VideoModal = () => {
+    return (
+      <div
+        className="modal  model-lg  fade"
+        id="video"
+        tabIndex={-1}
+        role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div
+          className="modal-dialog modal-lg  modal-dialog-centered"
+          role="document"
+        >
+          <div
+            className="modal-content"
+            style={{ backgroundColor: "transparent", border: "none" }}
+          >
+            <React.Fragment>
+              <div className="modal-header">
+                <h5 className="modal-title" id="exampleModalLabel">
+                  Purchase Token
+                </h5>
+                <button
+                  type="button"
+                  className="close text-light"
+                  data-dismiss="modal"
+                  style={{ fontSize: "3rem" }}
+                  aria-label="Close"
+                  onClick={() => {
+                    this.setState({
+                      playing: false,
+                    });
+                  }}
+                >
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <ReactPlayer
+                width="100%"
+                height="100%"
+                url="1.mp4"
+                controls={true}
+                playing={this.state.playing && true}
+              />
+            </React.Fragment>
+          </div>
+        </div>
+      </div>
+    );
+  };
   handleClick = () => {
     try {
       this.setState({
@@ -60,18 +116,15 @@ export default class ThreeDGraphics extends Component {
                         data-animation="fadeInUpShorter"
                         data-animation-delay="1.5s"
                       >
-                        SIMI Crowdsale is modern, clean and{" "}
-                        <br className="d-none d-xl-block" />
-                        gradient ui ico most trending{" "}
-                        <br className="d-none d-xl-block" />
-                        template of 2019
+                        SIMI Crowdsale is modern, clean and gradient ui ico most
+                        trending template of 2019
                       </h1>
                       <h3
                         className="mb-4 d-block white animated"
                         data-animation="fadeInUpShorter"
                         data-animation-delay="1.6s"
                       >
-                        First decentralized marketing platform that allows{" "}
+                        First decentralized marketing platform that allows
                         <br className="d-none d-xl-block" />
                         merchants and affiliates.
                       </h3>
@@ -103,17 +156,15 @@ export default class ThreeDGraphics extends Component {
                       data-animation-delay="1.7s"
                     >
                       <img
-                        src="Capture.JPG"
+                        onClick={this.openModal}
+                        src="./Capture.JPG"
                         className="img-fluid"
-                        data-toggle="modal"
-                        data-backdrop="static"
-                        data-keyboard="false"
-                        onClick={() => {
-                          this.setState({
-                            playing: true,
-                          });
-                        }}
-                        data-target="#video"
+                      />
+                      <ModalVideo
+                        channel="custom"
+                        isOpen={this.state.isOpen}
+                        url="1.mp4"
+                        onClose={() => this.setState({ isOpen: false })}
                       />
                     </div>
                   </div>
@@ -122,53 +173,6 @@ export default class ThreeDGraphics extends Component {
             </div>
           </div>
         </section>
-        <div
-          className="modal  model-lg  fade"
-          id="video"
-          tabIndex={-1}
-          role="dialog"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <div
-            className="modal-dialog modal-lg  modal-dialog-centered"
-            role="document"
-          >
-            <div
-              className="modal-content"
-              style={{ backgroundColor: "transparent", border: "none" }}
-            >
-              <React.Fragment>
-                <div className="modal-header">
-                  <h5 className="modal-title" id="exampleModalLabel">
-                    Purchase Token
-                  </h5>
-                  <button
-                    type="button"
-                    className="close text-light"
-                    data-dismiss="modal"
-                    style={{ fontSize: "3rem" }}
-                    aria-label="Close"
-                    onClick={() => {
-                      this.setState({
-                        playing: false,
-                      });
-                    }}
-                  >
-                    <span aria-hidden="true">×</span>
-                  </button>
-                </div>
-                <ReactPlayer
-                  width="100%"
-                  height="100%"
-                  url="1.mp4"
-                  controls={true}
-                  playing={this.state.playing && true}
-                />
-              </React.Fragment>
-            </div>
-          </div>
-        </div>
 
         <div
           className="modal fade"

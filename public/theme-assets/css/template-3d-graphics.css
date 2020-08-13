@@ -2725,13 +2725,13 @@ svg#loader g:last-child circle {
 }
 
 .navbar.navbar-light a {
-  color: #7d7d7d;
+  color: black;
 }
 .navbar.navbar-light a.btn {
   color: #ffffff;
 }
 .navbar.navbar-light ul.navbar-nav li .nav-link {
-  color: #7d7d7d;
+  color: black;
 }
 
 #navigation #slide-line {
@@ -4761,7 +4761,8 @@ header .navbar.navbar-fixed {
     background: #ffffff;
   }
   .main-menu.navbar .dropdown-menu {
-    background: #1d4a9f;
+    background: #fff;
+    border: 1px solid black;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
   }
