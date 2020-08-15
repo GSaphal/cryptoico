@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="container">
         <div className="footer-wrapper">
           <div className="row">
-            <div className="col-md-4">
+            <div className="col-md-7">
               <div className="about">
                 <div
                   className="title animated"
@@ -83,7 +83,7 @@ export default function Footer() {
                 </ul>
               </div>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-5">
               <div className="links">
                 <h5
                   className="title animated"
@@ -140,46 +140,9 @@ export default function Footer() {
                 </ul>
               </div>
             </div>
-            <div className="col-md-4">
-              <div className="feed">
-                <h5
-                  className="title animated"
-                  data-animation="fadeInUpShorter"
-                  data-animation-delay="0.8s"
-                >
-                  Twitter Feed
-                </h5>
-                <div className="tweets">
-                  <span
-                    className="animated"
-                    data-animation="fadeInUpShorter"
-                    data-animation-delay="1.0s"
-                  >
-                    More about our most powerful theme Crypto ICO :
-                    https://t.co/JHBAS345
-                  </span>
-                  <span
-                    className="animated"
-                    data-animation="fadeInUpShorter"
-                    data-animation-delay="1.2s"
-                  >
-                    More infotamation about CIC Coin : https://t.co/JHSD34JHB
-                  </span>
-                </div>
-              </div>
-            </div>
           </div>
           <div className="copy-right mx-auto text-center">
-            <span className="copyright">
-              Copyright © 2019, Crypto ICO. Template Designed by{" "}
-              <a
-                href="http://pixinvent.com"
-                title="pixinvent"
-                className="white"
-              >
-                Pixinvent
-              </a>
-            </span>
+            <span className="copyright">Copyright © 2020, Simicor.</span>
           </div>
         </div>
       </div>

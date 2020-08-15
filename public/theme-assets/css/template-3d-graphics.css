@@ -3112,16 +3112,13 @@ header .navbar.navbar-shadow {
   text-align: center;
   font-size: 18px;
   width: 200px;
-  border-top: 4px solid #24a8f2;
+  border-top: 4px solid black;
 }
 .roadmap .swiper-slide .roadmap-info {
   margin-top: 47px;
 }
 .roadmap .swiper-slide.active .roadmap-info {
-  background: -webkit-linear-gradient(45deg, #29beff, #1c76fe);
-  background: -moz-linear-gradient(45deg, #29beff, #1c76fe);
-  background: -o-linear-gradient(45deg, #29beff, #1c76fe);
-  background: linear-gradient(45deg, #29beff, #1c76fe);
+  background: #01011d;
   margin-top: 32px;
   padding: 15px 0 0;
   color: white;
@@ -3138,17 +3135,14 @@ header .navbar.navbar-shadow {
   bottom: 100%;
   width: 0;
   height: 0;
-  border-bottom: 10px solid #1c76fe;
+  border-bottom: 10px solid black;
   border-top: 10px solid transparent;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
 }
 .roadmap .swiper-slide.active .live {
   display: block;
-  background: -webkit-linear-gradient(45deg, #bf68e6, #9e48cd);
-  background: -moz-linear-gradient(45deg, #bf68e6, #9e48cd);
-  background: -o-linear-gradient(45deg, #bf68e6, #9e48cd);
-  background: linear-gradient(45deg, #bf68e6, #9e48cd);
+  background: #cd071e;
   padding: 8px 0;
   border-radius: 0 0 6px 6px;
   margin-top: 10px;
@@ -3164,10 +3158,7 @@ header .navbar.navbar-shadow {
   top: 0;
   display: inline-block;
   cursor: pointer;
-  background: -webkit-linear-gradient(45deg, #bf68e6, #9e48cd);
-  background: -moz-linear-gradient(45deg, #bf68e6, #9e48cd);
-  background: -o-linear-gradient(45deg, #bf68e6, #9e48cd);
-  background: linear-gradient(45deg, #bf68e6, #9e48cd);
+  background: #cd071e;
   color: #ffffff;
   padding: 17px;
   border-radius: 50%;
@@ -3247,10 +3238,7 @@ header .navbar.navbar-shadow {
   height: 25px;
   background-color: white;
   border-radius: 25px;
-  background: -webkit-linear-gradient(45deg, #29beff, #1c76fe);
-  background: -moz-linear-gradient(45deg, #29beff, #1c76fe);
-  background: -o-linear-gradient(45deg, #29beff, #1c76fe);
-  background: linear-gradient(45deg, #29beff, #1c76fe);
+  background: black;
   border: none;
   position: absolute;
   top: -14px;
@@ -3280,11 +3268,7 @@ header .navbar.navbar-shadow {
   color: white;
   font-size: 0.75rem;
   line-height: 25px;
-  background: -webkit-linear-gradient(45deg, #29beff, #1c76fe);
-  background: -moz-linear-gradient(45deg, #29beff, #1c76fe);
-  background: -o-linear-gradient(45deg, #29beff, #1c76fe);
-  background: linear-gradient(45deg, #29beff, #1c76fe);
-  border: none;
+  background: black;
   color: #ffffff;
 }
 .roadmap .timestamp.completed span:after {
@@ -3296,13 +3280,10 @@ header .navbar.navbar-shadow {
 }
 .roadmap .timestamp.active span:before {
   content: " ";
-  background: -webkit-linear-gradient(45deg, #bf68e6, #9e48cd);
-  background: -moz-linear-gradient(45deg, #bf68e6, #9e48cd);
-  background: -o-linear-gradient(45deg, #bf68e6, #9e48cd);
-  background: linear-gradient(45deg, #bf68e6, #9e48cd);
+  background: #cd071e;
   border: none;
-  -webkit-box-shadow: 0 0 10px 0 #bf68e6;
-  box-shadow: 0 0 10px 0 #bf68e6;
+  -webkit-box-shadow: 0 0 10px 0 #cd071e;
+  box-shadow: 0 0 10px 0 #cd071e;
 }
 .roadmap .timestamp.active span:after {
   content: "";

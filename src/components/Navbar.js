@@ -33,7 +33,7 @@ export default class Navbar extends Component {
                   style={{ height: "50px" }}
                 />
                 <span className="brand-text">
-                  <span className="font-weight-bold">SIMI</span> Crowdsale
+                  <span className="font-weight-bold">SIMI</span> Coin
                 </span>
               </a>
               <button
