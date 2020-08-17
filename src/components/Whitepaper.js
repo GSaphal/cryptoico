@@ -14,7 +14,7 @@ export default function Whitepaper() {
               <h6 className="sub-title">Documents</h6>
               <h2 className="title">Whitepaper</h2>
             </div>
-            <p
+            {/* <p
               className="content-desc animated"
               data-animation="fadeInUpShorter"
               data-animation-delay="0.4s"
@@ -23,7 +23,7 @@ export default function Whitepaper() {
               order to use a service. <br className="d-none d-xl-block" />
               Terms of service can also be merely a disclaimer, especially
               regarding the use of websites.
-            </p>
+            </p> */}
           </div>
           <div className="row">
             <div className="col-lg-5 col-md-12">
@@ -44,32 +44,26 @@ export default function Whitepaper() {
                   data-animation="fadeInUpShorter"
                   data-animation-delay="0.5s"
                 >
-                  Whitepaper
+                  Our Vision
                 </h4>
                 <p
                   className="animated"
                   data-animation="fadeInUpShorter"
                   data-animation-delay="0.6s"
                 >
-                  A white paper is an authoritative report or guide that informs
-                  readers concisely about a complex issue and presents the
-                  issuing body's philosophy on the matter. It is meant to help
-                  readers understand an issue, solve a problem, or make a
-                  decision.
+                  Our vision here at Silica Mining Corporation is to become the
+                  worlds most valued silica mining business and to deliver
+                  sustainable returns for our investors.
                 </p>
                 <p
                   className="animated"
                   data-animation="fadeInUpShorter"
                   data-animation-delay="0.7s"
                 >
-                  The initial British term concerning a type of
-                  government-issued document has proliferated, taking a somewhat
-                  new meaning in business. In business, a white paper is closer
-                  to a form of marketing presentation, a tool meant to persuade
-                  customers and partners and promote a product or viewpoint,
-                  White papers may be considered grey literature.
+                  Every £1 invested equals to 1 share in Silica Mining
+                  Corporation.
                 </p>
-                <p
+                {/* <p
                   className="animated"
                   data-animation="fadeInUpShorter"
                   data-animation-delay="0.8s"
@@ -77,7 +71,7 @@ export default function Whitepaper() {
                   Since the early 1990s, the term "white paper", or
                   "whitepaper", has been applied to documents used as marketing
                   or sales tools in business.
-                </p>
+                </p> */}
                 <div className="whitepaper-languages">
                   <div className="row">
                     <div

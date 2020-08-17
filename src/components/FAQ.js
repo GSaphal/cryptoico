@@ -18,16 +18,6 @@ export default function FAQ() {
               <h6 className="sub-title">question</h6>
               <h2 className="title">FAQ</h2>
             </div>
-            <p
-              className="content-desc animated"
-              data-animation="fadeInUpShorter"
-              data-animation-delay="0.4s"
-            >
-              Originally the term "FAQ" referred to the Frequently Asked
-              Question itself, and the <br className="d-none d-xl-block" />
-              compilation of questions and answers was known as a "FAQ list" or
-              some similar expression.
-            </p>
           </div>
           <div className="row">
             <div className="col">
@@ -59,7 +49,7 @@ export default function FAQ() {
                     aria-selected="false"
                     role="tab"
                   >
-                    Pre-ICO
+                    SIMI
                   </a>
                   <a
                     href="#token"
@@ -122,7 +112,7 @@ export default function FAQ() {
                             aria-controls="collapseOne"
                           >
                             <span className="icon gradient-crypto" />
-                            Can I make payments directly from an exchange?
+                            What is Silica?
                           </a>
                         </h5>
                       </div>
@@ -133,18 +123,16 @@ export default function FAQ() {
                         data-parent="#general-accordion"
                       >
                         <div className="card-body">
-                          Anim pariatur cliche reprehenderit, enim eiusmod high
-                          life accusamus terry richardson ad squid. 3 wolf moon
-                          officia aute, non cupidatat skateboard dolor brunch.
-                          Food truck quinoa nesciunt laborum eiusmod. Brunch 3
-                          wolf moon tempor, sunt aliqua put a bird on it squid
-                          single-origin coffee nulla assumenda shoreditch et.
-                          Nihil anim keffiyeh helvetica, craft beer labore wes
-                          anderson cred nesciunt sapiente ea proident. Ad vegan
-                          excepteur butcher vice lomo. Leggings occaecat craft
-                          beer farm-to-table, raw denim aesthetic synth nesciunt
-                          you probably haven't heard of them accusamus labore
-                          sustainable VHS.
+                          Silica is silicon dioxide (SiO2). Silicon compounds
+                          are the most significant component of the Earth’s
+                          crust.Since sand is plentiful, easy to mine and
+                          relatively easy to process, it is the primary ore
+                          source of silicon. The metamorphic rock, quartzite, is
+                          another source. Silica is used in food, beverages,
+                          glass, cosmetics, pharmaceuticals, building,
+                          construction, steel, petroleum, fibre optics,
+                          semiconductor, electronics, rubbers, plastics,
+                          sealants, health & beauty & much more.
                         </div>
                       </div>
                     </div>
@@ -163,7 +151,7 @@ export default function FAQ() {
                             aria-controls="collapseTwo"
                           >
                             <span className="icon gradient-crypto" />
-                            When will CICO be listed on exchanges?
+                            Where is Silica Used?
                           </a>
                         </h5>
                       </div>
@@ -174,18 +162,16 @@ export default function FAQ() {
                         data-parent="#general-accordion"
                       >
                         <div className="card-body">
-                          Anim pariatur cliche reprehenderit, enim eiusmod high
-                          life accusamus terry richardson ad squid. 3 wolf moon
-                          officia aute, non cupidatat skateboard dolor brunch.
-                          Food truck quinoa nesciunt laborum eiusmod. Brunch 3
-                          wolf moon tempor, sunt aliqua put a bird on it squid
-                          single-origin coffee nulla assumenda shoreditch et.
-                          Nihil anim keffiyeh helvetica, craft beer labore wes
-                          anderson cred nesciunt sapiente ea proident. Ad vegan
-                          excepteur butcher vice lomo. Leggings occaecat craft
-                          beer farm-to-table, raw denim aesthetic synth nesciunt
-                          you probably haven't heard of them accusamus labore
-                          sustainable VHS.
+                          Silica is used in food, beverages, glass, cosmetics,
+                          pharmaceuticals, building, construction, steel,
+                          petroleum, fibre optics, semiconductor, electronics,
+                          rubbers, plastics, sealants, health & beauty & much
+                          more.There has been an increase in product demand from
+                          electronics sector, owing to its high thermal
+                          stability and resistance to weathering, ozone,
+                          moisture, and UV radiation.Additionally, demand for
+                          feldspar silica in building/ceramics and glass
+                          industries continues to rise.
                         </div>
                       </div>
                     </div>
@@ -204,7 +190,7 @@ export default function FAQ() {
                             aria-controls="collapseThree"
                           >
                             <span className="icon gradient-crypto" />
-                            What is the CICO Token asmart contract address?
+                            What's the market of Silica looks like?
                           </a>
                         </h5>
                       </div>
@@ -215,18 +201,13 @@ export default function FAQ() {
                         data-parent="#general-accordion"
                       >
                         <div className="card-body">
-                          Anim pariatur cliche reprehenderit, enim eiusmod high
-                          life accusamus terry richardson ad squid. 3 wolf moon
-                          officia aute, non cupidatat skateboard dolor brunch.
-                          Food truck quinoa nesciunt laborum eiusmod. Brunch 3
-                          wolf moon tempor, sunt aliqua put a bird on it squid
-                          single-origin coffee nulla assumenda shoreditch et.
-                          Nihil anim keffiyeh helvetica, craft beer labore wes
-                          anderson cred nesciunt sapiente ea proident. Ad vegan
-                          excepteur butcher vice lomo. Leggings occaecat craft
-                          beer farm-to-table, raw denim aesthetic synth nesciunt
-                          you probably haven't heard of them accusamus labore
-                          sustainable VHS.
+                          Forecasted profit in the year one (one investments
+                          funds are reached) is £28,558,185, rising in year two
+                          to £39,698,677 and then also £39,698,677 by year
+                          three. This provides a Return on Capital of 34.85% in
+                          year three. These figures are based on delivery of
+                          300,000 tonnes in year 2 and year 3. We estimate the
+                          actual capacity to be around 800,000 tonnes per year.
                         </div>
                       </div>
                     </div>

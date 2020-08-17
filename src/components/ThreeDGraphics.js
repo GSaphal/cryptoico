@@ -116,7 +116,7 @@ export default class ThreeDGraphics extends Component {
                         data-animation="fadeInUpShorter"
                         data-animation-delay="1.5s"
                       >
-                        SIMI Crowdsale is modern, clean and gradient ui ico most
+                        SIMI Coin is modern, clean and gradient ui ico most
                         trending template of 2019
                       </h1>
                       <h3

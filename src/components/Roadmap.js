@@ -18,11 +18,7 @@ export default function Roadmap() {
               className="content-desc animated"
               data-animation="fadeInUpShorter"
               data-animation-delay="0.4s"
-            >
-              This is a list of cryptocurrencies. The number of cryptocurrencies
-              available over <br className="d-none d-xl-block" />
-              the internet as of 7 January 2018 is over 1384 and growing.
-            </p>
+            ></p>
           </div>
           <div
             className="row animated"

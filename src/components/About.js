@@ -12,17 +12,8 @@ export default function About() {
               data-animation-delay="0.3s"
             >
               <h6 className="sub-title">About</h6>
-              <h2 className="title">What is Crypto ICO</h2>
+              <h2 className="title">What is SIMI Coin</h2>
             </div>
-            <p
-              className="content-desc animated"
-              data-animation="fadeInUpShorter"
-              data-animation-delay="0.4s"
-            >
-              Crypto ICO aims to disrupt the cryptotrading industry by lowering
-              the barrier <br className="d-none d-xl-block" />
-              to creating algorithmic trading models.
-            </p>
           </div>
           <div className="content-area">
             <div className="row">
@@ -32,23 +23,27 @@ export default function About() {
                 data-animation-delay="0.5s"
               >
                 <h4 className="title">
-                  We built a platform for <br /> The crypto trading Industry
+                  SIMI Coin is targeted towards anyone that
+                  <br />
+                  wants to invest into a coin backed by real assets.
                 </h4>
                 <h6 className="pt-4 pb-2">
-                  Cryptocurrency exchanges or digital currency exchanges (DCE)
-                  are businesses that allow customers to trade cryptocurrencies
-                  or digital currencies for other assets.
+                  From the general public to small/mid/high level investors.
+                  Initial offer will be £500m shares in the company via
+                  cryptocurrency.
                 </h6>
                 <p>
-                  Cryptocurrency exchanges or digital currency exchanges (DCE)
-                  are businesses that allow customers to trade cryptocurrencies
-                  or digital currencies for other assets
+                  In regards to high level investors it is a platform to invest
+                  without the need of disclosing their details on shareholding.
+                  Also this allows anyone that is interested in investing
+                  convenience, to allow them 24/7 hour access to invest rather
+                  then paperwork being exchanged back and forth during office
+                  hours.
                 </p>
                 <p>
-                  Creators of digital currencies are often independent of the
-                  DCEs that trade the currency.[6] In one type of system,
-                  digital currency providers (DCP), are businesses that keep and
-                  administer accounts.
+                  We are targeting people that want to secure their money/wealth
+                  in assets which can provide them a return on investment in the
+                  near future.
                 </p>
               </div>
               <div

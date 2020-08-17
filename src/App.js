@@ -41,11 +41,11 @@ export default class App extends React.Component {
               <About />
               <ProblemandSolutions />
               <Whitepaper />
-              <Roadmap />
               <OurCoins />
+
+              <Roadmap />
               <TokenDistribution />
-              <Team />
-              <Advisors />
+
               <FAQ />
               <Modals />
             </main>

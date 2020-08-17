@@ -15,20 +15,9 @@ export default function OurCoins() {
               data-animation="fadeInUpShorter"
               data-animation-delay="0.3s"
             >
-              <h6 className="sub-title">About coin</h6>
-              <h2 className="title">Our COIN</h2>
+              <h6 className="sub-title">About Company</h6>
+              <h2 className="title">About Our Company</h2>
             </div>
-            <p
-              className="content-desc animated"
-              data-animation="fadeInUpShorter"
-              data-animation-delay="0.4s"
-            >
-              Decentralized cryptocurrency is produced by the entire
-              cryptocurrency system collectively{" "}
-              <br className="d-none d-xl-block" />
-              at a rate which is defined when the system is created and which is
-              publicly known.{" "}
-            </p>
           </div>
           <div className="row">
             <div
@@ -50,23 +39,18 @@ export default function OurCoins() {
               data-animation-delay="0.6s"
             >
               <div className="dark-bg-heading mb-4">
-                <h4 className="title">CIC Coin</h4>
+                <h4 className="title">Introduction </h4>
               </div>
-              <p>
-                The validity of each cryptocurrency's coins is provided by a
-                blockchain. A blockchain is a continuously growing list of
-                records, called blocks, which are linked and secured using
-                cryptography.Each block typically contains a hash pointer as a
-                link to a previous block, a timestamp and transaction data. By
-                design, blockchains are inherently resistant to modification of
-                the data. a blockchain is typically managed by a peer-to-peer
-                network collectively adhering to a protocol for validating new
-                blocks. Once recorded
-              </p>
-              <p>
-                The block time is the average time it takes for the network to
-                generate one extra block in the blockchain.[21] Some blockchains
-                create a new block as frequently as every five seconds.
+              <p className="text-light">
+                In 2016 we acquired a substantial plot of land (over 100 acres)
+                in Europe. According to recent testing (drillings up to 30m),
+                the land was found to contain over 32.5 million tons of feldspar
+                that contain highly valuable - over 70% purity - Silicon Dioxide
+                (SiO2) in the form of quartz. When the legal side of a transfer
+                of deeds was completed, the group was able to acquire an
+                additional plot of land sitting on an extension of the same
+                deposit as the main parcel. The additional plot contains over
+                2,500,000 tons of high purity Silica.
               </p>
             </div>
           </div>

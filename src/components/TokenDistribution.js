@@ -17,16 +17,6 @@ export default function TokenDistribution() {
               <h6 className="sub-title">Token stats</h6>
               <h2 className="title">Token Distribution</h2>
             </div>
-            <p
-              className="content-desc animated"
-              data-animation="fadeInUpShorter"
-              data-animation-delay="0.4s"
-            >
-              The ICO usually takes place before the project is completed, and
-              helps fund the expenses <br className="d-none d-xl-block" />
-              undertaken by the founding team until launch. For some of the
-              larger projects.
-            </p>
           </div>
           <div className="row">
             <div
@@ -37,18 +27,29 @@ export default function TokenDistribution() {
               <div className="content-area">
                 <h4>Details</h4>
                 <p className="mt-1">
-                  To calculate the number of tokens you’ll receive, you can
-                  follow the following formula. Note that this applies to public
-                  presale contributions only. If you participated through a
-                  syndicate or private presale,
+                  Initial funds of £4 million are required to complete an
+                  existing option to purchase the fully licensed and permitted
+                  land title and to begin mineral extraction. Production can
+                  commence within 6 -12 weeks of acquiring land title.
+                  Forecasted profit in the year one is £28,558,185, rising in
+                  year two to £39,698,677 and then also £39,698,677 by year
+                  three. This provides a Return on Capital of 34.85% in year
+                  three. These figures are based on delivery of 300,000 tonnes
+                  in year 2 and year 3. We estimate the actual capacity to be
+                  around 800,000 tonnes per year.
+                  <br />
+                  <br />
+                  Investing into Simicoin allows us to raise funds to start the
+                  mining process which in turn will secure return on investment
+                  for everyone that has invested into the project.
+                  <br />
+                  <br />
+                  Symbol: SIMI
+                  <br /> <br />
+                  £1 ≈ 0.0033 ETH = 1 Share = 1 SIMI Token
+                  <br />
                 </p>
-                <p>
-                  To calculate the number of tokens you’ll receive, you can
-                  follow the following formula. Note that this applies to public
-                  presale contributions only. If you participated through a
-                  syndicate or private presale,
-                </p>
-                <p>
+                {/* <p>
                   <span>Symbol:</span>{" "}
                   <strong className="grey-accent2">CIC</strong>
                 </p>
@@ -59,7 +60,7 @@ export default function TokenDistribution() {
                 <p>
                   <span>Type:</span>{" "}
                   <strong className="grey-accent2">ERC20</strong>
-                </p>
+                </p> */}
               </div>
             </div>
             <div
